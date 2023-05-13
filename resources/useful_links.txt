@@ -1,16 +1,19 @@
-https://elearning.intra.42.fr/notions/printf/subnotions/printf-introduction/videos/introduction-4bb23c97-835c-41f4-83b1-9ecd59bf3f39
-School video
-
 https://42-cursus.gitbook.io/guide/rank-01/ft_printf
 
 https://www.youtube.com/watch?v=3iX9a_l9W9Y
 How to create functions with a variable number of arguments using stdarg.h | C Programming Tutorial
 
-https://developer.apple.com/library/archive/qa/qa1405/_index.html
-Q:  How can I write a method that takes a variable number of arguments, like NSString's +stringWithFormat:?
+https://www.thegeekstuff.com/2017/05/c-variadic-functions/
+
 
 https://man7.org/linux/man-pages/man3/stdarg.3.html
 man 3 stdarg (man 3 printf)
 
 http://www.java2s.com/Code/C/Function/Arrayoffunctionpointer.htm
 Array of function pointer : Function Pointer « Function « C / ANSI-C
+
+https://elearning.intra.42.fr/notions/printf/subnotions/printf-introduction/videos/introduction-4bb23c97-835c-41f4-83b1-9ecd59bf3f39
+School video
+
+https://developer.apple.com/library/archive/qa/qa1405/_index.html
+Q:  How can I write a method that takes a variable number of arguments, like NSString's +stringWithFormat:?

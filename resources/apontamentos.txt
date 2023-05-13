@@ -6,9 +6,41 @@
 #    By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/12 15:36:54 by jqueijo-          #+#    #+#              #
-#    Updated: 2023/05/12 15:40:42 by jqueijo-         ###   ########.fr        #
+#    Updated: 2023/05/13 12:13:24 by jqueijo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-Printf is a variadic function, because it takes a variable number of arguments.
-Gonna need va_list, va_start, va_end.
+//	Printf is a command to display a formatted string on the screen.
+//	It uses the % symbol followed by an element, as a format specifier.
+//	List of format specifiers used for this project:
+
+// %. 		Prints a % char.
+
+// d, i. 	Prints an int as a signed integer. Same for output, but different
+//			when used with scanf for input.
+
+// u.		Prints decimal unsigned int.
+
+// x,X		Prints an unsigned in as a hexadecimal number. Lower or upper case.
+
+// s		Prints a null-terminated (\0) string.
+
+// c		Prints a single character (char).
+
+// p		Prints the adress of a pointer or any other variable. The output
+//			is displayed in a hexadecimal value. format specifier to print
+//			data of type (void *).
+
+What is our problem? We need a program, that outputs a string with a variable
+number of parameters. Depending on what symbol (or flag) is input, it
+reads and writes different variables converted to a string.
+So i need an iterator that reads and writes a string up till it finds a
+special operator, and when it does it checks which function it has to use, to
+write those parameters in the write order, and it then it continues writing and
+iterating the original string until it's over or it finds another var. parameter.
+
+The prototype of ft_printf is:
+int	ft_printf(const char *s, ...);
+
+I need to #include <stdarg.h> to allow me to use a new type of variable, va_list,
+and 3 very useful macros: va_start, va_arg, & va_end.
