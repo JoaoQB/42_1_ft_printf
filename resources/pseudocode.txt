@@ -6,7 +6,7 @@
 #    By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/11 10:42:37 by jqueijo-          #+#    #+#              #
-#    Updated: 2023/05/13 12:40:27 by jqueijo-         ###   ########.fr        #
+#    Updated: 2023/06/05 17:11:47 by jqueijo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,3 +25,11 @@
 
 4- Once the first variable argument has been written, you go back to step 1,
 	until the string is finished. ('\0')
+
+while (string)
+	if %
+		result += print_arg(string[++i])
+	else
+		result += print_char(string)
+	i++;
+return (result)
