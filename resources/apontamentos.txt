@@ -6,7 +6,7 @@
 #    By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/12 15:36:54 by jqueijo-          #+#    #+#              #
-#    Updated: 2023/05/13 12:13:24 by jqueijo-         ###   ########.fr        #
+#    Updated: 2023/06/05 16:55:59 by jqueijo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ write those parameters in the write order, and it then it continues writing and
 iterating the original string until it's over or it finds another var. parameter.
 
 The prototype of ft_printf is:
-int	ft_printf(const char *s, ...);
+int	ft_printf(const char *, ...);
 
 I need to #include <stdarg.h> to allow me to use a new type of variable, va_list,
 and 3 very useful macros: va_start, va_arg, & va_end.
