@@ -6,15 +6,57 @@
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 10:16:07 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/05/13 13:19:31 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/08 14:09:19 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdarg.h>
+#include <string.h>
 
 int	ft_max(int num_args, ...);
+void	ft_printf(char *placeholders, ...);
 
+int	main(void)
+{
+	ft_printf("ddfd", 4, 2, 10.5, 3);
+	ft_printf("fdfdf", 1.1, 0, 2.2, 5, 3.2);
+
+	return (0);
+}
+
+void	ft_printf(char *placeholders, ...)
+{
+	int	num_args;
+	int	i;
+	int	x;
+	double	z;
+
+	// Check placeholders length
+	num_args = strlen(placeholders);
+	va_list	args;
+	// Start va_list(list name, first parameter before ...)
+	va_start(args, placeholders);
+	i = 0;
+	while (i < num_args)
+	{
+		if (placeholders[i] == 'd')
+		{
+			x = va_arg(args, int);
+			printf("%d\n", x);
+		}
+		else if (placeholders[i] == 'f')
+		{
+			z = va_arg(args, double);
+			printf("%f\n", z);
+		}
+		i++;
+	}
+	va_end(args);
+}
+
+
+/*
 int main()
 {
 	int	max_num;
@@ -23,7 +65,7 @@ int main()
 	printf("max_num: %d\n", max_num);
 
 	return (0);
-}
+}*/
 
 int	ft_max(int num_args, ...)
 {
