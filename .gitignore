@@ -1,6 +1,6 @@
 *.o
 *.out
-libft.a
+*.a
 *.swp
 .DS_Store
 .gitignore
