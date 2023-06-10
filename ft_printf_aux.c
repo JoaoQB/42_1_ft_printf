@@ -6,11 +6,11 @@
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 15:11:30 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/06/10 16:48:33 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/10 17:15:23 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printchar(char c)
 {
@@ -29,6 +29,12 @@ int	ft_printstring(char *str)
 	}
 	return (i);
 }
+
+int	ft_printnbr_base(int i, char *base)
+{
+
+}
+
 // Function to check which type of arg.
 
 /*int	ft_printnum(int x, int i)

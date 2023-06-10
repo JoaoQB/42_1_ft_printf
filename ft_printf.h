@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 11:13:58 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/06/10 16:47:13 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/10 17:13:54 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
 
-# define LIBFTPRINTF_H
+# define FT_PRINTF_H
 
 # include <stdlib.h> // memory allocation
 # include <stdarg.h> // va_lists

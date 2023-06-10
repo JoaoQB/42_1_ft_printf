@@ -6,11 +6,11 @@
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 15:53:45 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/06/10 16:38:16 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/10 17:12:11 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_check_args(char c, va_list l)
 {
