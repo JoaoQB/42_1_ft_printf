@@ -6,7 +6,7 @@
 #    By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/12 15:36:54 by jqueijo-          #+#    #+#              #
-#    Updated: 2023/06/05 16:55:59 by jqueijo-         ###   ########.fr        #
+#    Updated: 2023/06/10 15:14:13 by jqueijo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@
 
 // u.		Prints decimal unsigned int.
 
-// x,X		Prints an unsigned in as a hexadecimal number. Lower or upper case.
+// x,X		Prints an unsigned int as a hexadecimal number. Lower or upper case.
 
 // s		Prints a null-terminated (\0) string.
 

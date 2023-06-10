@@ -6,14 +6,33 @@
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 15:11:30 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/06/08 16:47:59 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/10 16:48:33 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printnum(int x, int i)
+int	ft_printchar(char c)
 {
+	return (write(1, &c, sizeof(char)));
+}
+
+int	ft_printstring(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		ft_printchar(str[i]);
+		i++;
+	}
+	return (i);
+}
+// Function to check which type of arg.
+
+/*int	ft_printnum(int x, int i)
+{va_list
 	if (x < 0)
 	{
 		i += ft_printchar();
@@ -37,7 +56,6 @@ int	ft_printnum(int x, int i)
 	}
 }
 
-/*
 int	ft_printstring(char *str, int i)
 {}
 
@@ -49,11 +67,3 @@ int	ft_printhexa()
 
 int	ft_printpointer(void *, int i)
 {}*/
-
-int	main(void)
-{
-	int i = 0;
-	int x = ft_printnum(300, i);
-	printf("chars printed: %d", x);
-	return (0);
-}
