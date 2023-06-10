@@ -6,7 +6,7 @@
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 15:11:30 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/06/10 17:15:23 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/10 18:37:45 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,30 @@ int	ft_printstring(char *str)
 	return (i);
 }
 
-int	ft_printnbr_base(int i, char *base)
+int	ft_printnbr_base(int nbr, char *base)
 {
+	int		base_value;
+	int		printed;
 
+	base_value = 0;
+	printed = 0;
+	while (base[base_value])
+		base_value++;
+	if (nbr < 0)
+	{
+		if (nbr == -2147483648)
+			return (write(1, "-2147483648", 11));
+		printed += ft_printchar('-');
+		nbr = -nbr;
+	}
+	if (nbr < base_value)
+		printed += ft_printchar(base[nbr]);
+	else if (nbr >= base_value)
+	{
+		printed += ft_printnbr_base(nbr / base_value, base);
+		printed += ft_printnbr_base(nbr % base_value, base);
+	}
+	return (printed);
 }
 
 // Function to check which type of arg.
