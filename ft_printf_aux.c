@@ -6,7 +6,7 @@
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 15:11:30 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/06/10 18:37:45 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/15 12:00:03 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_printnbr_base(int nbr, char *base)
 	printed = 0;
 	while (base[base_value])
 		base_value++;
-	if (nbr < 0)
+	if (nbr < 0 && base == "0123456789")
 	{
 		if (nbr == -2147483648)
 			return (write(1, "-2147483648", 11));
