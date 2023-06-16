@@ -6,7 +6,7 @@
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 11:13:58 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/06/10 18:25:35 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/16 12:00:48 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	ft_printf(const char *format, ...);
 int	ft_check_args(char c, va_list l);
 int	ft_printchar(char c);
 int	ft_printstring(char *str);
-int	ft_printnbr_base(int nbr, char *base);
+int	ft_printnbr_base(unsigned int nbr, char *base);
+int	ft_printnbr(int nbr);
+int	ft_printptr(int n);
 
 #endif

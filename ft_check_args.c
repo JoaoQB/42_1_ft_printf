@@ -6,7 +6,7 @@
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 15:53:45 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/06/10 18:26:01 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/16 12:07:49 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ int	ft_check_args(char c, va_list l)
 	else if (c == 's')
 		printed += ft_printstring(va_arg(l, char *));
 	else if (c == 'd' || c == 'i')
-		printed += ft_printnbr_base(va_arg(l, int), "0123456789");
+		printed += ft_printnbr(va_arg(l, int));
 	else if (c == 'x')
 		printed += ft_printnbr_base(va_arg(l, int), "0123456789abcedf");
 	else if (c == 'X')
 		printed += ft_printnbr_base(va_arg(l, int), "0123456789ABCDEF");
-	/*else if (c == 'u')
-		ft_print_unnum(va_arg(l, unsigned int), i);
-	else if (c == 'p')
-		ft_printpointer(va_arg(l, *void), i);*/
+	else if (c == 'u')
+		printed += ft_printnbr_base(va_arg(l, unsigned int), "0123456789");
+	/*else if (c == 'p')
+		printed += ft_printptr(va_arg(l, int));*/
 	return (printed);
 }
