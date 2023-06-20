@@ -6,7 +6,7 @@
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 15:11:30 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/06/20 14:56:41 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/20 16:29:29 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ int	ft_printchar(char c)
 	return (write(1, &c, sizeof(char)));
 }
 
-int	ft_printstring(char *str)
+int	ft_printstr(char *str)
 {
 	int	i;
 
 	i = 0;
+	if (!str)
+		return (write(1, "(null)", 6));
 	while (str[i])
 	{
 		ft_printchar(str[i]);
@@ -54,8 +56,8 @@ int	ft_printnbr(int nbr)
 
 int	ft_printnbr_base(unsigned int nbr, char *base)
 {
-	unsigned int		base_value;
-	unsigned int		printed;
+	unsigned int	base_value;
+	unsigned int	printed;
 
 	base_value = 0;
 	printed = 0;
@@ -69,12 +71,4 @@ int	ft_printnbr_base(unsigned int nbr, char *base)
 		printed += ft_printnbr_base(nbr % base_value, base);
 	}
 	return (printed);
-}
-
-int	ft_printptr(unsigned int i)
-{
-	if (i == 0)
-		return (ft_printstring("(nil)"));
-	else
-		return (ft_printstring("0x") + ft_printnbr_base(i, "0123456789abcedf"));
 }
