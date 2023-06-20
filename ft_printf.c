@@ -6,7 +6,7 @@
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 11:12:12 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/06/16 11:57:58 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/20 14:41:38 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (printed);
 }
-/*
-int	main()
-{
-	ft_printf("%x\n", -99);
-	printf("%p\n", -10);
-	ft_printf("%x\n", 99);
-	return (0);
-}*/

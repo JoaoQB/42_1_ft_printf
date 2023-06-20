@@ -6,7 +6,7 @@
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 15:11:30 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/06/16 12:07:34 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/20 14:56:41 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,12 @@ int	ft_printnbr_base(unsigned int nbr, char *base)
 		printed += ft_printnbr_base(nbr % base_value, base);
 	}
 	return (printed);
+}
+
+int	ft_printptr(unsigned int i)
+{
+	if (i == 0)
+		return (ft_printstring("(nil)"));
+	else
+		return (ft_printstring("0x") + ft_printnbr_base(i, "0123456789abcedf"));
 }
