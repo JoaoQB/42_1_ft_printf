@@ -6,7 +6,7 @@
 /*   By: jqueijo- <jqueijo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 11:22:04 by jqueijo-          #+#    #+#             */
-/*   Updated: 2023/06/21 11:25:11 by jqueijo-         ###   ########.fr       */
+/*   Updated: 2023/06/21 12:07:34 by jqueijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ int	ft_check_args(char c, va_list l)
 	else if (c == 'd' || c == 'i')
 		printed += ft_printnbr(va_arg(l, int));
 	else if (c == 'x')
-		printed += ft_printnbr_base(va_arg(l, int), "0123456789abcdef");
+		printed += ft_printptr(va_arg(l, int));
 	else if (c == 'X')
 		printed += ft_printnbr_base(va_arg(l, int), "0123456789ABCDEF");
 	else if (c == 'u')
@@ -149,8 +149,7 @@ int	ft_printf(const char *format, ...)
 
 int	main()
 {
-	float	x = 37.7;
-	ft_printf("%d\n", x);
-
+	int 	a;
+	ft_printf("%x\n", 4567);
 	return (0);
 }
